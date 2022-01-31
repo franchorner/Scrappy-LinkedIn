@@ -50,15 +50,14 @@ function App() {
               <form onSubmit={sendData}>
                 <input
                   type="text"
-                  className="search-input"
+                  className="search-input shadow"
                   placeholder="Ex: Programador..."
                   name=""
                   value={inputSearch}
                   onChange={(e) => setInputSearch(e.target.value)}
                 />
-                <button type="submit" href="#" className="search-icon">
-                  <img src={search} className="img-icon" />
-                  <h6 className="search-text">PESQUISAR</h6>
+                <button type="submit" href="#" className="search-icon shadow">
+                  <i class="fas fa-search img-icon"></i>
                 </button>
               </form>
             </div>
@@ -67,8 +66,10 @@ function App() {
         <div className="row people">
           {" "}
           {isLoading ? (
-            <div className="spinner-border" role="status">
-              <span className="sr-only">Loading...</span>
+            <div class="d-flex justify-content-center contain-spinner">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
             </div>
           ) : (
             resultList.map((props, index) => {

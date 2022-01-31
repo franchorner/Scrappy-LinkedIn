@@ -1,7 +1,14 @@
+*:focus{
+  outline: 0;
+}
+#root {
+  min-height: 100vh;
+}
 .team-boxed {
     color:#313437;
     background-color:#eef4f7;
     height: 100%;
+    min-height: 100vh;
   }
   
   .team-boxed p {
@@ -43,6 +50,8 @@
   
   .team-boxed .item .box {
     text-align:center;
+    height:500px;
+    position: relative;
     padding:30px;
     background-color:#fff;
     margin-bottom:30px;
@@ -76,6 +85,13 @@
   .team-boxed .social {
     font-size:18px;
     color:#a2a8ae;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .team-boxed .social a {

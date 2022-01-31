@@ -1,3 +1,4 @@
+import truncateStr from "../util/truncateStr";
 function ResultCard({
   profileImage = "https://media-exp1.licdn.com/dms/image/C4D03AQH7M-wunPlj8A/profile-displayphoto-shrink_100_100/0/1542371921673?e=1648684800&v=beta&t=yIDH1rnAsGrozkavHVSjeBalQ9eyWbf1SvGrKW-SeuI",
   name = "Rômulo Machado",
@@ -11,23 +12,23 @@ function ResultCard({
 }) {
   return (
     <div className="col-md-6 col-lg-4 item">
-      <div className="box">
+      <div className="box shadow">
         <img className="rounded-circle" src={profileImage} />
         <h3 className="name">{name}</h3>
         <h6 className="city">{city}</h6>
         <p className="title">{role}</p>
         <p className="description">
           <span>{profileInfo.infoName}: </span>
-          {profileInfo.info}
+          {truncateStr(profileInfo.info, 140)}
         </p>
         <div className="social">
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-primary mr-2" type="submit">
             <a href={profileLink} target="">
               Ver Perfil
             </a>
           </button>
-          <button type="button" className="btn btn-outline-danger">
-            Não Verificado
+          <button type="button" className="btn btn-outline-warning">
+            Status
           </button>
         </div>
       </div>
