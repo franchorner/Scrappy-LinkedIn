@@ -1,0 +1,125 @@
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color:white;
+}
+
+.introduction-text {
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.container-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.search {
+    width: 100%;
+    margin-bottom: auto;
+    margin-top: 15px;
+    height: 50px;
+
+}
+
+.search-input {
+    background-color:white;
+    width: 100%;
+    line-height: 20px;
+    color: black;
+}
+
+.search .search-input {
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 19px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: 1.8px solid black;
+}
+
+.search-icon {
+    height: 100%;
+    width: 17%;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    display: inline;
+    font-weight: bold;
+    bottom: 50px;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d6efd;
+    border: 1.8px solid black;
+}
+
+.search-text {
+    color: white;
+    display: inline;
+    font-weight: bold;
+}
+
+.img-icon {
+    padding-right: 10px;
+}
+
+.search-icon:hover {
+    color: black !important;    
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none
+}
+
+.card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+    transition: all 2s
+}
+
+.card-inner:hover {
+    transform: scale(1.1)
+}
+
+.mg-text span {
+    font-size: 12px
+}
+
+.mg-text {
+    line-height: 14px
+}
+
+@media (max-width:767px) {
+    .search-text {
+        display: none;
+    }
+
+    .img-icon {
+        padding: 0;
+    }
+}
+    
+
