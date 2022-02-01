@@ -3,7 +3,6 @@ import "./css/search.css";
 import "./css/style.css";
 import ResultCard from "./components/ResultCard";
 import robot from "./img/robot.svg";
-import search from "./img/search.svg";
 
 function App() {
   const [inputSearch, setInputSearch] = useState("");
@@ -57,18 +56,23 @@ function App() {
                   onChange={(e) => setInputSearch(e.target.value)}
                 />
                 <button type="submit" href="#" className="search-icon shadow">
-                  <i class="fas fa-search img-icon"></i>
+                  <i className="fas fa-search img-icon"></i>
                 </button>
               </form>
             </div>
           </div>
         </div>
         <div className="row people">
-          {" "}
+          {!isLoading && resultList.length < 1 && (
+            <p className="text-center">
+              Não há resultados. Faça uma nova pesquisa.
+            </p>
+          )}
+
           {isLoading ? (
-            <div class="d-flex justify-content-center contain-spinner">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="d-flex justify-content-center contain-spinner">
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
               </div>
             </div>
           ) : (

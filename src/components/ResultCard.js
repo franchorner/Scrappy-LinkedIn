@@ -1,25 +1,31 @@
 import truncateStr from "../util/truncateStr";
 function ResultCard({
-  profileImage = "https://media-exp1.licdn.com/dms/image/C4D03AQH7M-wunPlj8A/profile-displayphoto-shrink_100_100/0/1542371921673?e=1648684800&v=beta&t=yIDH1rnAsGrozkavHVSjeBalQ9eyWbf1SvGrKW-SeuI",
-  name = "Rômulo Machado",
-  role = "Full Stack Developer | Node | React",
-  city = "Parobé, RS",
+  profileImage = "https://media.istockphoto.com/illustrations/blank-man-profile-head-icon-placeholder-illustration-id1298261537?k=20&m=1298261537&s=612x612&w=0&h=8plXnK6Ur3LGqG9s-Xt2ZZfKk6bI0IbzDZrNH9tr9Ok=",
+  name = "Usuário do Linkedin",
+  role = "",
+  city = "",
   profileInfo = {
-    infoName: "Atual",
-    info: "Software Developer na Meta - ...stack, utilizando JavaScript, TypeScript com react e node.js.",
+    infoName: "",
+    info: "",
   },
-  profileLink = "https://www.linkedin.com/in/machadoromulo?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABDpx7AB0Ndy0wGLv4I2KLd5yZPZLw8tG30",
+  profileLink = "#",
 }) {
+  const infoName = `${profileInfo.infoName}: `;
+
   return (
     <div className="col-md-6 col-lg-4 item">
       <div className="box shadow">
-        <img className="rounded-circle" src={profileImage} />
+        <img
+          className="rounded-circle profile-img"
+          src={profileImage}
+          alt="perfil"
+        />
         <h3 className="name">{name}</h3>
         <h6 className="city">{city}</h6>
         <p className="title">{role}</p>
         <p className="description">
-          <span>{profileInfo.infoName}: </span>
-          {truncateStr(profileInfo.info, 140)}
+          <span>{profileImage.infoName ? infoName : ""}</span>
+          {profileInfo.info ? truncateStr(profileInfo.info, 140) : ""}
         </p>
         <div className="social">
           <button className="btn btn-primary mr-2" type="submit">
