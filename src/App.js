@@ -3,33 +3,9 @@ import "./css/search.css";
 import "./css/style.css";
 import ResultCard from "./components/ResultCard";
 import robot from "./img/robot.svg";
+import icon from "./img/Icone.png";
 
 function App() {
-  const [inputSearch, setInputSearch] = useState("");
-  const [resultList, setResultList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    /*const API_URL =
-      `https://lighthouse-dev-scraper.herokuapp.com/search?query=Dev%20node&numberOfPages=1&token=1dd460adea70527ba66b4abb8ffabbe661409f20`;
-    fetch(API_URL).then((response) => {
-      return response.json().then((json) => {
-        console.log(json);
-      });
-    });*/
-  }, []);
-  function sendData(e) {
-    setIsLoading(true);
-    e.preventDefault();
-    const API_URL = `https://lighthouse-dev-scraper.herokuapp.com/search?query=${encodeURI(
-      inputSearch
-    )}&numberOfPages=1&token=1dd460adea70527ba66b4abb8ffabbe661409f20`;
-    fetch(API_URL).then((response) => {
-      return response.json().then((json) => {
-        setResultList(json);
-        setIsLoading(false);
-      });
-    });
-  }
   return (
     <div className="team-boxed">
       <div className="container">
@@ -46,14 +22,12 @@ function App() {
               </h6>
             </div>
             <div className="search">
-              <form onSubmit={sendData}>
+              <form>
                 <input
                   type="text"
                   className="search-input shadow"
                   placeholder="Ex: Programador..."
                   name=""
-                  value={inputSearch}
-                  onChange={(e) => setInputSearch(e.target.value)}
                 />
                 <button type="submit" href="#" className="search-icon shadow">
                   <i className="fas fa-search img-icon"></i>
@@ -62,24 +36,43 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="row people">
-          {!isLoading && resultList.length < 1 && (
-            <p className="text-center">
-              Não há resultados. Faça uma nova pesquisa.
-            </p>
-          )}
-
-          {isLoading ? (
-            <div className="d-flex justify-content-center contain-spinner">
-              <div className="spinner-border" role="status">
-                <span className="sr-only">Loading...</span>
-              </div>
+        <div class="row people">
+          <div class="col-md-6 col-lg-4 item">
+            <div class="box"><img class="rounded-circle" src={icon} />
+              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
+              <h6 class="city">Três Coroas / RS</h6>
+              <p class="title">Programador / Python</p>
+              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
+              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
             </div>
-          ) : (
-            resultList.map((props, index) => {
-              return <ResultCard key={index} {...props} />;
-            })
-          )}
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+            <div class="box"><img class="rounded-circle" src={icon} />
+              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
+              <h6 class="city">Três Coroas / RS</h6>
+              <p class="title">Programador / Python</p>
+              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
+              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+            <div class="box"><img class="rounded-circle" src={icon} />
+              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
+              <h6 class="city">Três Coroas / RS</h6>
+              <p class="title">Programador / Python</p>
+              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
+              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+            <div class="box"><img class="rounded-circle" src={icon} />
+              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
+              <h6 class="city">Três Coroas / RS</h6>
+              <p class="title">Programador / Python</p>
+              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
+              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
