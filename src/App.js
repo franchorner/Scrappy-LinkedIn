@@ -4,6 +4,7 @@ import "./css/style.css";
 import ResultCard from "./components/ResultCard";
 import robot from "./img/robot.svg";
 import icon from "./img/Icone.png";
+import {BsBuilding} from "react-icons/bs";
 
 function App() {
   return (
@@ -37,44 +38,38 @@ function App() {
           </div>
         </div>
         <div class="row people">
-          <div class="col-md-6 col-lg-4 item">
-            <div class="box"><img class="rounded-circle" src={icon} />
-              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
-              <h6 class="city">Três Coroas / RS</h6>
-              <p class="title">Programador / Python</p>
-              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
-              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
+          <div class="item pb-4">
+            <div class="perfil pt-4 pl-4 pr-4">
+              <img class="rounded-circle" src={icon}></img>
+              <h1 class="mt-2">Vinko Vincenzo</h1>
+              <p>PhD Student | PUCRS/UNIGE, Professor de Graduação na FACCAT, Coordenadora dos Projetos Panvel-Faccat e Faccat+Lighthouse</p>
+              <p>Taquara - RS - Brasil</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 item">
-            <div class="box"><img class="rounded-circle" src={icon} />
-              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
-              <h6 class="city">Três Coroas / RS</h6>
-              <p class="title">Programador / Python</p>
-              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
-              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
+            <div class="interesting-items pt-4 pb-4 pl-5 pr-3">
+              <div class="company-items pt-3">
+                <div class="pl-3 pr-3"><BsBuilding class="icon"></BsBuilding></div>
+                <div class="text-company pb-3">
+                  <div class="company">
+                    <h1>Omega Automação e Sistemas</h1>
+                    <p>Software Developer</p>
+                    <p>set. de 2016 - o momento</p>
+                  </div>
+                  <div class="company">
+                    <h1>Escola Técnica Estadual Monteiro Lobato</h1>
+                    <p>Professor Técnico</p>
+                    <p>jun. de 2012 - ago. de 2021</p>
+                  </div>
+                  <div class="company">
+                    <h1>Meta </h1>
+                    <p>Software Developer</p>
+                    <p>abr. de 2021 - o momento</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 item">
-            <div class="box"><img class="rounded-circle" src={icon} />
-              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
-              <h6 class="city">Três Coroas / RS</h6>
-              <p class="title">Programador / Python</p>
-              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
-              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 item">
-            <div class="box"><img class="rounded-circle" src={icon} />
-              <h3 class="name">Vinko Vicenzo Tomljanovie</h3>
-              <h6 class="city">Três Coroas / RS</h6>
-              <p class="title">Programador / Python</p>
-              <p class="description"><span>Atual: </span> Software Developer na Meta - utilizando Javascript, Typescript com react e node.js</p>
-              <div class="social"><button class="btn btn-primary" type="submit"><a href="https://www.linkedin.com/in/vinko-vicenzo-tomljanovie-23b135230/" target=" ">PERFIL</a></button> <button type="button" class="btn btn-outline-danger">Não Verificado</button></div>
-            </div>
-          </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
