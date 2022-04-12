@@ -5,6 +5,7 @@ import ResultCard from "./components/ResultCard";
 import robot from "./img/robot.svg";
 import icon from "./img/Icone.png";
 import {BsBuilding} from "react-icons/bs";
+import {BsListCheck} from "react-icons/bs";
 
 function App() {
   return (
@@ -67,9 +68,22 @@ function App() {
                 </div>
               </div>
             </div>
+              <div class="interesting-items pt-4 pb-4 pl-5 pr-3">
+                  <div class="company-items pt-3">
+                  <div class="pl-3 pr-3"><BsListCheck class="icon"></BsListCheck></div>
+                  <div class="applications pb-4">
+                    <h1>Mobile device management</h1>
+                    <h1>Full Stack Developer</h1>
+                    <h1>Program Management</h1>
+                    <h1>React.js</h1>
+                    <h1>Desenvolvimento de software personalizado</h1>
+                    <h1>Management...</h1>
+                </div>
+                </div>
+                </div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
