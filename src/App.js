@@ -4,8 +4,8 @@ import "./css/style.css";
 import ResultCard from "./components/ResultCard";
 import robot from "./img/robot.svg";
 import icon from "./img/Icone.png";
-import {BsBuilding} from "react-icons/bs";
-import {BsListCheck} from "react-icons/bs";
+import { BsBuilding, BsListCheck, BsFillJournalBookmarkFill } from "react-icons/bs";
+import { GrCertificate } from "react-icons/gr";
 
 function App() {
   return (
@@ -39,17 +39,17 @@ function App() {
           </div>
         </div>
         <div class="row people">
-          <div class="item pb-4">
-            <div class="perfil pt-4 pl-4 pr-4">
+          <div class="item blue pb-4">
+            <div class="perfil pt-4 pl-3 pr-3">
               <img class="rounded-circle" src={icon}></img>
               <h1 class="mt-2">Vinko Vincenzo</h1>
-              <p>PhD Student | PUCRS/UNIGE, Professor de Graduação na FACCAT, Coordenadora dos Projetos Panvel-Faccat e Faccat+Lighthouse</p>
-              <p>Taquara - RS - Brasil</p>
+              <p class="mb-1">PhD Student | PUCRS/UNIGE, Professor de Graduação na FACCAT, Coordenadora dos Projetos Panvel-Faccat e Faccat+Lighthouse</p>
+              <p class="tiny">Taquara - RS - Brasil</p>
             </div>
-            <div class="interesting-items pt-4 pb-4 pl-5 pr-3">
-              <div class="company-items pt-3">
-                <div class="pl-3 pr-3"><BsBuilding class="icon"></BsBuilding></div>
-                <div class="text-company pb-3">
+            <div class="interesting-items pt-2 pb-2">
+              <div class="company-items pt-2">
+                <div class="pr-2"><BsBuilding class="icon"></BsBuilding></div>
+                <div class="text-company">
                   <div class="company">
                     <h1>Omega Automação e Sistemas</h1>
                     <p>Software Developer</p>
@@ -67,20 +67,35 @@ function App() {
                   </div>
                 </div>
               </div>
+              <div class="company-items pt-2">
+                <div class="pr-2"><BsListCheck class="icon"></BsListCheck></div>
+                <div class="text-application">
+                  <h1>Mobile device management</h1>
+                  <h1>Full Stack Developer</h1>
+                  <h1>Program Management</h1>
+                  <h1>React.js</h1>
+                  <h1>Desenvolvimento de software personalizado</h1>
+                  <h1>Management...</h1>
+                </div>
+              </div>
+              <div class="smaller-cards">
+                <div class="small-items">
+                  <div class="pr-2">< BsFillJournalBookmarkFill class="icon"></BsFillJournalBookmarkFill></div>
+                  <div class="text-education">
+                    <div class="education">
+                      <h1>Centro de Ensino Dom Alberto</h1>
+                      <p>
+                        of Business Administration - MBA, Gerenciamento de Projetos de T.I</p>
+                    </div>
+                    <div class="education">
+                      <h1>Escola Técnica Estadual Monteiro Lobato</h1>
+                      <p>Técnico em Eletrônica, Eletrônica Industrial...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="small-items"></div>
+              </div>
             </div>
-              <div class="interesting-items pt-4 pb-4 pl-5 pr-3">
-                  <div class="company-items pt-3">
-                  <div class="pl-3 pr-3"><BsListCheck class="icon"></BsListCheck></div>
-                  <div class="applications pb-4">
-                    <h1>Mobile device management</h1>
-                    <h1>Full Stack Developer</h1>
-                    <h1>Program Management</h1>
-                    <h1>React.js</h1>
-                    <h1>Desenvolvimento de software personalizado</h1>
-                    <h1>Management...</h1>
-                </div>
-                </div>
-                </div>
           </div>
         </div>
       </div>
